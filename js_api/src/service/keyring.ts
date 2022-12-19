@@ -1,18 +1,18 @@
-import { keyExtractSuri, mnemonicGenerate, mnemonicValidate, cryptoWaitReady, signatureVerify, encodeAddress } from "@polkadot/util-crypto";
-import { hexToU8a, u8aToHex } from "@polkadot/util";
-import { parseQrCode, getSigner, makeTx, getSubmittable } from "../utils/QrSigner";
-import gov from "./gov";
-import metaDataMap from "../constants/networkMetadata";
-import { Metadata, TypeRegistry } from "@polkadot/types";
 import { wrapBytes } from "@polkadot/extension-dapp/wrapBytes";
+import { Metadata, TypeRegistry } from "@polkadot/types";
+import { hexToU8a, u8aToHex } from "@polkadot/util";
+import { cryptoWaitReady, encodeAddress, keyExtractSuri, mnemonicGenerate, mnemonicValidate, signatureVerify } from "@polkadot/util-crypto";
+import metaDataMap from "../constants/networkMetadata";
+import { getSigner, getSubmittable, makeTx, parseQrCode } from "../utils/QrSigner";
+import gov from "./gov";
 
-import { Keyring } from "@polkadot/keyring";
-import { KeypairType } from "@polkadot/util-crypto/types";
-import { KeyringPair, KeyringPair$Json } from "@polkadot/keyring/types";
 import { ApiPromise, SubmittableResult } from "@polkadot/api";
 import { SubmittableExtrinsic } from "@polkadot/api/types";
-import { ITuple } from "@polkadot/types/types";
+import { Keyring } from "@polkadot/keyring";
+import { KeyringPair, KeyringPair$Json } from "@polkadot/keyring/types";
 import { DispatchError } from "@polkadot/types/interfaces";
+import { ITuple } from "@polkadot/types/types";
+import { KeypairType } from "@polkadot/util-crypto/types";
 import account from "./account";
 let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
 
@@ -76,8 +76,26 @@ async function addressFromRawSeed(rawSeed: string, ss58Format: number, cryptoTyp
   }
 }
 
+async function keyPair(cryptoType: KeypairType) {
+  const key = mnemonicGenerate();
+  if (!mnemonicValidate(key)) return null;
+  const keyPair = keyring.addFromMnemonic(key, {}, cryptoType || "sr25519");
+  return {
+    mnemonic: key,
+    pubKey: u8aToHex(keyPair.publicKey),
+  };
+}
+
+function keyPairFromMnemonic(cryptoType: KeypairType, mnemonic: string) {
+  let keyPair = keyring.addFromMnemonic(mnemonic, {}, cryptoType);
+  return {
+    mnemonic,
+    pubKey: u8aToHex(keyPair.publicKey),
+  };
+}
+
 /**
- * Import keyPair from mnemonic, rawSeed or keystore.
+ * Import keyPair from mnemonic.
  */
 function recover(keyType: string, cryptoType: KeypairType, key: string, password: string) {
   return new Promise((resolve, reject) => {
@@ -244,7 +262,7 @@ function sendTx(api: ApiPromise, txInfo: any, paramList: any[], password: string
     } else {
       tx = !!txInfo.txHex ? api.tx(txInfo.txHex) : api.tx[txInfo.module][txInfo.call](...paramList);
     }
-    let unsub = () => {};
+    let unsub = () => { };
     const onStatusChange = (result: SubmittableResult) => {
       if (result.status.isInBlock || result.status.isFinalized) {
         const { success, error } = _extractEvents(api, result);
@@ -397,7 +415,7 @@ function addSignatureAndSend(api: ApiPromise, address: string, signed: string) {
     if (!!tx.addSignature) {
       tx.addSignature(address, `0x${signed}`, payload);
 
-      let unsub = () => {};
+      let unsub = () => { };
       const onStatusChange = (result: SubmittableResult) => {
         if (result.status.isInBlock || result.status.isFinalized) {
           const { success, error } = _extractEvents(api, result);
@@ -501,4 +519,7 @@ export default {
   signTxAsExtension,
   signBytesAsExtension,
   verifySignature,
+  //New functions
+  keyPair,
+  keyPairFromMnemonic
 };
