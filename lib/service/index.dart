@@ -1,21 +1,21 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/service/account.dart';
-import 'package:polkawallet_sdk/service/assets.dart';
-import 'package:polkawallet_sdk/service/bridge.dart';
-import 'package:polkawallet_sdk/service/eth/index.dart';
-import 'package:polkawallet_sdk/service/gov.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/service/parachain.dart';
-import 'package:polkawallet_sdk/service/recovery.dart';
-import 'package:polkawallet_sdk/service/setting.dart';
-import 'package:polkawallet_sdk/service/staking.dart';
-import 'package:polkawallet_sdk/service/tx.dart';
-import 'package:polkawallet_sdk/service/uos.dart';
-import 'package:polkawallet_sdk/service/walletConnect.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/service/account.dart';
+import 'package:polkadot_dart/service/assets.dart';
+import 'package:polkadot_dart/service/bridge.dart';
+import 'package:polkadot_dart/service/eth/index.dart';
+import 'package:polkadot_dart/service/gov.dart';
+import 'package:polkadot_dart/service/keyring.dart';
+import 'package:polkadot_dart/service/parachain.dart';
+import 'package:polkadot_dart/service/recovery.dart';
+import 'package:polkadot_dart/service/setting.dart';
+import 'package:polkadot_dart/service/staking.dart';
+import 'package:polkadot_dart/service/tx.dart';
+import 'package:polkadot_dart/service/uos.dart';
+import 'package:polkadot_dart/service/walletConnect.dart';
+import 'package:polkadot_dart/service/webViewRunner.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
 
 /// The service calling JavaScript API of `polkadot-js/api` directly
 /// through [WebViewRunner], providing APIs for [PolkawalletApi].

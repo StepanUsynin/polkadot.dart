@@ -277,7 +277,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.6.0"
-  polkawallet_sdk:
+  polkadot_dart:
     dependency: "direct dev"
     description:
       path: ".."

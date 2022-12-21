@@ -1,6 +1,6 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/networkStateData.dart';
-import 'package:polkawallet_sdk/service/setting.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/networkStateData.dart';
+import 'package:polkadot_dart/service/setting.dart';
 
 class ApiSetting {
   ApiSetting(this.apiRoot, this.service);

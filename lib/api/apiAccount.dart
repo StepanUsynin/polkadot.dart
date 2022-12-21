@@ -1,6 +1,6 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/service/account.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/balanceData.dart';
+import 'package:polkadot_dart/service/account.dart';
 
 class ApiAccount {
   ApiAccount(this.apiRoot, this.service);

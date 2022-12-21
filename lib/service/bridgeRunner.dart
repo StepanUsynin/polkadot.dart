@@ -54,13 +54,13 @@ class BridgeRunner {
         },
         initialUrlRequest: URLRequest(
             url: Uri.parse(
-                "http://localhost:8080/packages/polkawallet_sdk/assets/bridge.html")),
+                "http://localhost:8080/packages/polkadot_dart/assets/bridge.html")),
         onWebViewCreated: (controller) async {
           print('Bridge HeadlessInAppWebView created!');
           controller.loadUrl(
               urlRequest: URLRequest(
                   url: Uri.parse(
-                      "http://localhost:8080/packages/polkawallet_sdk/assets/bridge.html")));
+                      "http://localhost:8080/packages/polkadot_dart/assets/bridge.html")));
         },
         onConsoleMessage: (controller, message) {
           print("CONSOLE MESSAGE: " + message.message);

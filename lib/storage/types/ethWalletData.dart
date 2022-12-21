@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
 
 part 'ethWalletData.g.dart';
 

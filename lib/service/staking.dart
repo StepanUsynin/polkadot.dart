@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:polkadot_dart/service/index.dart';
 
 class ServiceStaking {
   ServiceStaking(this.serviceRoot);

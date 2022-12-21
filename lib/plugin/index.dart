@@ -2,17 +2,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/api/types/networkStateData.dart';
-import 'package:polkawallet_sdk/plugin/homeNavItem.dart';
-import 'package:polkawallet_sdk/plugin/store/balances.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/utils/app.dart';
+import 'package:polkadot_dart/api/types/balanceData.dart';
+import 'package:polkadot_dart/api/types/networkParams.dart';
+import 'package:polkadot_dart/api/types/networkStateData.dart';
+import 'package:polkadot_dart/plugin/homeNavItem.dart';
+import 'package:polkadot_dart/plugin/store/balances.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+import 'package:polkadot_dart/service/webViewRunner.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/utils/app.dart';
 
 const String sdk_cache_key = 'polka_wallet_sdk_cache';
 const String net_state_cache_key = 'network_state';

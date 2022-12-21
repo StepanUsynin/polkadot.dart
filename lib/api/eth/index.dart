@@ -1,7 +1,7 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/eth/apiAccountEth.dart';
-import 'package:polkawallet_sdk/api/eth/apiKeyringEth.dart';
-import 'package:polkawallet_sdk/service/eth/index.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/eth/apiAccountEth.dart';
+import 'package:polkadot_dart/api/eth/apiKeyringEth.dart';
+import 'package:polkadot_dart/service/eth/index.dart';
 
 class ApiEth {
   ApiEth(PolkawalletApi apiRoot, ServiceEth service) {

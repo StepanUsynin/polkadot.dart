@@ -1,12 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-// import 'package:polkawallet_sdk/service/account.dart';
-// import 'package:polkawallet_sdk/service/index.dart';
-// import 'package:polkawallet_sdk/storage/keyring.dart';
-// import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+// import 'package:polkadot_dart/service/account.dart';
+// import 'package:polkadot_dart/service/index.dart';
+// import 'package:polkadot_dart/storage/keyring.dart';
+// import 'package:polkadot_dart/storage/types/keyPairData.dart';
 
 void main() {
   // const testKeystore =

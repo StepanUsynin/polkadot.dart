@@ -1,8 +1,8 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/txInfoData.dart';
-import 'package:polkawallet_sdk/api/types/uosQrParseResultData.dart';
-import 'package:polkawallet_sdk/service/uos.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/txInfoData.dart';
+import 'package:polkadot_dart/api/types/uosQrParseResultData.dart';
+import 'package:polkadot_dart/service/uos.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
 
 /// Steps to complete offline-signature as a cold-wallet:
 /// 1. parseQrCode: parse raw data of QR code, and get signer address from it.

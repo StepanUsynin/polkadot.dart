@@ -6,10 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/webviewWithExtension/types/signExtrinsicParam.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewWithExtension extends StatefulWidget {
@@ -131,7 +131,7 @@ class _WebViewWithExtensionState extends State<WebViewWithExtension> {
 
     print('Inject extension js code...');
     final jsCode = await rootBundle
-        .loadString('packages/polkawallet_sdk/js_as_extension/dist/main.js');
+        .loadString('packages/polkadot_dart/js_as_extension/dist/main.js');
     _controller.runJavascriptReturningResult(jsCode);
     print('js code injected');
     if (widget.onExtensionReady != null) {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:polkadot_dart/service/index.dart';
 
 class ServiceAccountEth {
   ServiceAccountEth(this.serviceRoot);

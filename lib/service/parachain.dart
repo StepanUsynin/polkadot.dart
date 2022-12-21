@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:polkadot_dart/service/index.dart';
 
 class ServiceParachain {
   ServiceParachain(this.serviceRoot);

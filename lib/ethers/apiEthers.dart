@@ -4,11 +4,11 @@ import 'dart:math';
 
 import 'package:bip39/bip39.dart' as bip39;
 import 'package:ethers/signers/wallet.dart' as ethers;
-import 'package:polkawallet_sdk/api/types/addressIconData.dart';
-import 'package:polkawallet_sdk/service/index.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
-import 'package:polkawallet_sdk/storage/types/ethWalletData.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/api/types/addressIconData.dart';
+import 'package:polkadot_dart/service/index.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
+import 'package:polkadot_dart/storage/types/ethWalletData.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
 import 'package:web3dart/web3dart.dart';
 
 enum EVMKeyType { mnemonic, privateKey, keystore }

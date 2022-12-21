@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk_example/pages/keyring.dart';
+import 'package:polkadot_dart/api/types/balanceData.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+import 'package:polkadot_dart_example/pages/keyring.dart';
 
 class AccountPage extends StatefulWidget {
   AccountPage(this.sdk, this.showResult);

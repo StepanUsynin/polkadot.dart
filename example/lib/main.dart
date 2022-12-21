@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
-import 'package:polkawallet_sdk_example/pages/account.dart';
-import 'package:polkawallet_sdk_example/pages/dAppPage.dart';
-import 'package:polkawallet_sdk_example/pages/ethWithJS.dart';
-import 'package:polkawallet_sdk_example/pages/evm.dart';
-import 'package:polkawallet_sdk_example/pages/keyring.dart';
-import 'package:polkawallet_sdk_example/pages/setting.dart';
-import 'package:polkawallet_sdk_example/pages/tx.dart';
+import 'package:polkadot_dart/api/types/networkParams.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
+import 'package:polkadot_dart_example/pages/account.dart';
+import 'package:polkadot_dart_example/pages/dAppPage.dart';
+import 'package:polkadot_dart_example/pages/ethWithJS.dart';
+import 'package:polkadot_dart_example/pages/evm.dart';
+import 'package:polkadot_dart_example/pages/keyring.dart';
+import 'package:polkadot_dart_example/pages/setting.dart';
+import 'package:polkadot_dart_example/pages/tx.dart';
 
 import 'pages/staking.dart';
 

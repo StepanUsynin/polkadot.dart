@@ -1,5 +1,5 @@
-import 'package:polkawallet_sdk/service/eth/accountEth.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
+import 'package:polkadot_dart/service/eth/accountEth.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
 
 import '../api.dart';
 

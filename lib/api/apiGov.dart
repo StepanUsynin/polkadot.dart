@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/gov/genExternalLinksParams.dart';
-import 'package:polkawallet_sdk/api/types/gov/proposalInfoData.dart';
-import 'package:polkawallet_sdk/api/types/gov/referendumInfoData.dart';
-import 'package:polkawallet_sdk/api/types/gov/treasuryOverviewData.dart';
-import 'package:polkawallet_sdk/api/types/gov/treasuryTipData.dart';
-import 'package:polkawallet_sdk/service/gov.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/gov/genExternalLinksParams.dart';
+import 'package:polkadot_dart/api/types/gov/proposalInfoData.dart';
+import 'package:polkadot_dart/api/types/gov/referendumInfoData.dart';
+import 'package:polkadot_dart/api/types/gov/treasuryOverviewData.dart';
+import 'package:polkadot_dart/api/types/gov/treasuryTipData.dart';
+import 'package:polkadot_dart/service/gov.dart';
 
 class ApiGov {
   ApiGov(this.apiRoot, this.service);

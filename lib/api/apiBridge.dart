@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/bridge/bridgeChainData.dart';
-import 'package:polkawallet_sdk/api/types/bridge/bridgeTokenBalance.dart';
-import 'package:polkawallet_sdk/api/types/bridge/bridgeTxParams.dart';
-import 'package:polkawallet_sdk/service/bridge.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/bridge/bridgeChainData.dart';
+import 'package:polkadot_dart/api/types/bridge/bridgeTokenBalance.dart';
+import 'package:polkadot_dart/api/types/bridge/bridgeTxParams.dart';
+import 'package:polkadot_dart/service/bridge.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
 
 class ApiBridge {
   ApiBridge(this.apiRoot, this.service);

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:polkadot_dart/service/index.dart';
 
 /// Steps to complete offline-signature as a cold-wallet:
 /// 1. parseQrCode: parse raw data of QR code, and get signer address from it.

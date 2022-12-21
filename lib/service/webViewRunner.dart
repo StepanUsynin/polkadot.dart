@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/service/localServer.dart';
+import 'package:polkadot_dart/api/types/networkParams.dart';
+import 'package:polkadot_dart/service/localServer.dart';
 
 class WebViewRunner {
   HeadlessInAppWebView? _web;
@@ -43,7 +43,7 @@ class WebViewRunner {
     _jsCode = jsCode;
     // TODO: always load eth js for evm keyring (while evm online)
     // _jsCodeEth = await rootBundle
-    //     .loadString('packages/polkawallet_sdk/js_api_eth/dist/main.js');
+    //     .loadString('packages/polkadot_dart/js_api_eth/dist/main.js');
     // print('js eth file loaded');
 
     if (_web == null) {
@@ -63,7 +63,7 @@ class WebViewRunner {
         },
         initialUrlRequest: URLRequest(
             url: Uri.parse(
-                "http://localhost:8080/packages/polkawallet_sdk/assets/index.html")),
+                "http://localhost:8080/packages/polkadot_dart/assets/index.html")),
         onWebViewCreated: (controller) {
           print('HeadlessInAppWebView created!');
         },

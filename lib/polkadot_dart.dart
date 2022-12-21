@@ -1,15 +1,15 @@
-library polkawallet_sdk;
+library polkadot_dart;
 
 import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart';
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/ethers/apiEthers.dart';
-import 'package:polkawallet_sdk/service/index.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/ethers/apiEthers.dart';
+import 'package:polkadot_dart/service/index.dart';
+import 'package:polkadot_dart/service/webViewRunner.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
 
 /// SDK launchs a hidden webView to run polkadot.js/api for interacting
 /// with the substrate-based block-chain network.

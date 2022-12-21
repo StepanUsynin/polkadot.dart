@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/api/types/addressIconData.dart';
-import 'package:polkawallet_sdk/ethers/apiEthers.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
-import 'package:polkawallet_sdk/storage/types/ethWalletData.dart';
-import 'package:polkawallet_sdk_example/pages/keyring.dart';
+import 'package:polkadot_dart/api/types/addressIconData.dart';
+import 'package:polkadot_dart/ethers/apiEthers.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
+import 'package:polkadot_dart/storage/types/ethWalletData.dart';
+import 'package:polkadot_dart_example/pages/keyring.dart';
 
 class EVMPage extends StatefulWidget {
   EVMPage(this.sdk, this.keyring, this.showResult);

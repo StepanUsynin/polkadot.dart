@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/addressIconData.dart';
-import 'package:polkawallet_sdk/api/types/verifyResult.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/addressIconData.dart';
+import 'package:polkadot_dart/api/types/verifyResult.dart';
+import 'package:polkadot_dart/service/keyring.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/webviewWithExtension/types/signExtrinsicParam.dart';
 
 enum KeyType { mnemonic, rawSeed, keystore }
 

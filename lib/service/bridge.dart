@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:get_storage/get_storage.dart';
-import 'package:polkawallet_sdk/service/bridgeRunner.dart';
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:polkadot_dart/service/bridgeRunner.dart';
+import 'package:polkadot_dart/service/index.dart';
 
 class ServiceBridge {
   ServiceBridge(this.serviceRoot);

@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/plugin/store/balances.dart';
-import 'package:polkawallet_sdk/service/assets.dart';
+import 'package:polkadot_dart/api/api.dart';
+import 'package:polkadot_dart/api/types/balanceData.dart';
+import 'package:polkadot_dart/plugin/store/balances.dart';
+import 'package:polkadot_dart/service/assets.dart';
 
 class ApiAssets {
   ApiAssets(this.apiRoot, this.service);

@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:polkawallet_sdk/api/apiKeyring.dart';
-import 'package:polkawallet_sdk/api/types/addressIconData.dart';
-import 'package:polkawallet_sdk/polkawallet_sdk.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/api/apiKeyring.dart';
+import 'package:polkadot_dart/api/types/addressIconData.dart';
+import 'package:polkadot_dart/polkadot_dart.dart';
+import 'package:polkadot_dart/storage/keyring.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
 
 class KeyringPage extends StatefulWidget {
   KeyringPage(this.sdk, this.keyring, this.showResult);

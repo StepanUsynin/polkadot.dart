@@ -1,6 +1,6 @@
 # example
 
-polkawallet_sdk_example.
+polkadot_dart_example.
 
 ## Getting Started
 

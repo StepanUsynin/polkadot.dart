@@ -1,10 +1,10 @@
-import 'package:polkawallet_sdk/api/types/addressIconData.dart';
-import 'package:polkawallet_sdk/ethers/apiEthers.dart';
-import 'package:polkawallet_sdk/service/eth/keyringEth.dart';
-import 'package:polkawallet_sdk/storage/keyringEVM.dart';
-import 'package:polkawallet_sdk/storage/types/ethWalletData.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
+import 'package:polkadot_dart/api/types/addressIconData.dart';
+import 'package:polkadot_dart/ethers/apiEthers.dart';
+import 'package:polkadot_dart/service/eth/keyringEth.dart';
+import 'package:polkadot_dart/storage/keyringEVM.dart';
+import 'package:polkadot_dart/storage/types/ethWalletData.dart';
+import 'package:polkadot_dart/storage/types/keyPairData.dart';
+import 'package:polkadot_dart/webviewWithExtension/types/signExtrinsicParam.dart';
 
 import '../api.dart';
 
