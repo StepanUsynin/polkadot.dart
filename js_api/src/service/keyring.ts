@@ -18,7 +18,7 @@ let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
 
 async function generateMnemonic() {
   const key = mnemonicGenerate();
-  if (!checkMnemonicValid(key)) return null;
+  if (!mnemonicValidate(key)) return null;
   return key;
 }
 
