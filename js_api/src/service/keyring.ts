@@ -16,43 +16,24 @@ import { KeypairType } from "@polkadot/util-crypto/types";
 import account from "./account";
 let keyring = new Keyring({ ss58Format: 0, type: "sr25519" });
 
-/**
- * Generate a set of new mnemonic.
- */
-async function gen(mnemonic: string, ss58Format: number, cryptoType: KeypairType, derivePath: string) {
-  const key = mnemonic || mnemonicGenerate();
-  if (!mnemonicValidate(key)) return null;
-
-  const keyPair = keyring.addFromMnemonic(key + (derivePath || ""), {}, cryptoType || "sr25519");
-  const address = encodeAddress(keyPair.publicKey, ss58Format || 0);
-  const icons = await account.genIcons([address]);
-  return {
-    mnemonic: key,
-    address,
-    svg: icons[0][1],
-  };
+async function generateMnemonic() {
+  const key = mnemonicGenerate();
+  if (!checkMnemonicValid(key)) return null;
+  return key;
 }
 
-/**
- * mnemonic validate.
- */
 async function checkMnemonicValid(mnemonic: string) {
   return mnemonicValidate(mnemonic);
 }
 
-/**
- * get address and avatar from mnemonic.
- */
-async function addressFromMnemonic(mnemonic: string, ss58Format: number, cryptoType: KeypairType, derivePath: string) {
-  let keyPair: KeyringPair;
+async function addFromMnemonic(mnemonic: string, ss58Format: number, cryptoType: KeypairType, derivePath: string) {
   try {
-    keyPair = keyring.addFromMnemonic(mnemonic + (derivePath || ""), {}, cryptoType);
-    const address = encodeAddress(keyPair.publicKey, ss58Format);
-    const icons = await account.genIcons([address]);
+    let keyPair = keyring.addFromMnemonic(mnemonic + (derivePath || ""), {}, cryptoType);
+    let address = encodeAddress(keyPair.publicKey, ss58Format);
     return {
+      publicKey: keyPair.publicKey,
       address,
-      svg: icons[0][1],
-    };
+    }
   } catch (err) {
     return { error: err.message };
   }
@@ -74,24 +55,6 @@ async function addressFromRawSeed(rawSeed: string, ss58Format: number, cryptoTyp
   } catch (err) {
     return { error: err.message };
   }
-}
-
-async function keyPair(cryptoType: KeypairType) {
-  const key = mnemonicGenerate();
-  if (!mnemonicValidate(key)) return null;
-  const keyPair = keyring.addFromMnemonic(key, {}, cryptoType || "sr25519");
-  return {
-    mnemonic: key,
-    pubKey: u8aToHex(keyPair.publicKey),
-  };
-}
-
-function keyPairFromMnemonic(cryptoType: KeypairType, mnemonic: string) {
-  let keyPair = keyring.addFromMnemonic(mnemonic, {}, cryptoType);
-  return {
-    mnemonic,
-    pubKey: u8aToHex(keyPair.publicKey),
-  };
 }
 
 /**
@@ -502,9 +465,6 @@ async function verifySignature(message: string, signature: string, address: stri
 
 export default {
   initKeys,
-  gen,
-  checkMnemonicValid,
-  addressFromMnemonic,
   addressFromRawSeed,
   recover,
   txFeeEstimate,
@@ -520,6 +480,7 @@ export default {
   signBytesAsExtension,
   verifySignature,
   //New functions
-  keyPair,
-  keyPairFromMnemonic
+  generateMnemonic,
+  checkMnemonicValid,
+  addFromMnemonic,
 };
