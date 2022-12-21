@@ -30,8 +30,9 @@ async function addFromMnemonic(mnemonic: string, ss58Format: number, cryptoType:
   try {
     let keyPair = keyring.addFromMnemonic(mnemonic + (derivePath || ""), {}, cryptoType);
     let address = encodeAddress(keyPair.publicKey, ss58Format);
+    let publicKey = u8aToHex(keyPair.publicKey);
     return {
-      publicKey: keyPair.publicKey,
+      publicKey,
       address,
     }
   } catch (err) {
