@@ -63,7 +63,7 @@ class WebViewRunner {
         },
         initialUrlRequest: URLRequest(
             url: Uri.parse(
-                "http://localhost:8080/packages/polkadot_dart/assets/index.html")),
+                "http://10.0.2.2:8080/packages/polkadot_dart/assets/index.html")),
         onWebViewCreated: (controller) {
           print('HeadlessInAppWebView created!');
         },
