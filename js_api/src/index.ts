@@ -4,6 +4,7 @@ import localMetadata from "./constants/networkMetadata";
 import { subscribeMessage, getNetworkConst, getNetworkProperties } from "./service/setting";
 import keyring from "./service/keyring";
 import account from "./service/account";
+import chain from "./service/chain";
 import staking from "./service/staking";
 // import wc from "./service/walletconnect";
 import gov from "./service/gov";
@@ -84,6 +85,7 @@ const settings = {
 (<any>window).keyring = keyring;
 (<any>window).account = account;
 (<any>window).staking = staking;
+(<any>window).chain = chain;
 (<any>window).gov = gov;
 (<any>window).parachain = parachain;
 (<any>window).assets = assets;
